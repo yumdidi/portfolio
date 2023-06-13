@@ -1,0 +1,213 @@
+@charset "utf-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+a {
+    text-decoration: none;
+    color: #333;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Pretendard-Regular';
+    color: #333;
+}
+.section.intro {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+}
+/* take01 */
+.introMotion_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    /* display: none; */
+    background-color: white;
+    animation: bg_wtbk 6.5s forwards;
+    z-index: 100;
+}
+.take01 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.take01 > p.motionUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    font-size: 65px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    overflow: hidden;
+}
+.take01 .space {
+    display: inline-block;
+    width: 15px;
+}
+
+@keyframes BasicFadeUp {
+    25% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-140%);
+    }
+    100% {
+        transform: translateY(-140%);
+    }
+}
+@keyframes BasicFadeDown {
+    25% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-140%);
+    }
+    100% {
+        transform: translateY(-140%);
+    }
+}
+
+.take01 .fadeUp {
+    transform: translateY(115%);
+    animation: BasicFadeUp 5s 0.8s forwards cubic-bezier(.7, 0, .3, 1);
+}
+.take01 .fadeDown {
+    transform: translateY(-140%);
+    animation: BasicFadeDown 5s 0.8s forwards cubic-bezier(.7, 0, .3, 1);
+}
+
+/* take02 */
+.take02 h1.the {
+    position: absolute;
+    top: 43%;
+    left: -191px;
+    transform: translate(-50%, -50%);
+    font-size: 130px;
+    font-weight: 100;
+}
+.take02 h1.Best {
+    position: absolute;
+    top: 57%;
+    left: 115%;
+    transform: translate(-50%, -50%);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200px;
+    font-style: italic;
+}
+
+@keyframes slide_01 {
+    0% {
+    }
+    25% {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #333;
+    }
+    50%  {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+    100%  {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+}
+@keyframes slide_02 {
+    0% {
+    }
+    25% {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #333;
+    }
+    50%  {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+    100%  {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+}
+.take02 .slide01 {
+    animation: slide_01 3s 4s forwards  cubic-bezier(.7, .5, .1, 1);
+}
+.take02 .slide02 {
+    animation: slide_02 3s 4s forwards  cubic-bezier(.7, .5, .1, 1);
+}
+
+
+@keyframes bg_bk {
+    100% {
+        background-color: black;
+    }
+}
+.take02 {
+    width: 100%;
+    height: 1000px;
+    animation: bg_bk .3s 5s forwards;
+}
+.slide_wrap {
+    height: 400px;
+    overflow: hidden;
+}
+
+
+@keyframes hide {
+    0% {
+    }
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+.introMotion_wrap {
+    animation: hide 1.5s 6s forwards;
+}
+
+/* 인트로모션 끝 */
+
+.start {
+    position: relative;
+    margin: 0 180px;
+    height: 100vh;
+    overflow: hidden;
+}
+.start > p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 170px;
+    color: #666;
+    letter-spacing: 650px;
+}
+.start > p:nth-child(1) {
+    position: absolute;
+    top: -8%;
+}
+.start > p:nth-child(2) {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+}
+.start > p:nth-child(3) {
+    position: absolute;
+    letter-spacing: 420px;
+    top: 55%;
+}
+.start > p:nth-child(4) {
+    position: absolute;
+    top: 87%;
+}
